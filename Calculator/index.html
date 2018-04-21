@@ -1,0 +1,71 @@
+<!-- 計算機 -->
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>計算機</h1>
+    <br>
+    <form name="form01">
+        <label for="textbox1">数字１</label>
+        <input type="text" name="textbox1">
+        <br>
+        <label for="textbox2">数字２</label>
+        <input type="text" name="textbox2">
+        <br>
+        <input type="button" id="add" value="+">
+        <input type="button" id="sub" value="-">
+        <input type="button" id="mul" value="*">
+        <input type="button" id="dvi" value="/">
+        <input type="button" id="rem" value="%">
+        
+    </form>
+    
+    <script>
+        
+        var total = 0;//合計
+        
+        //足し算
+        add.onclick=function(){
+            var a = parseInt(document.form01.textbox1.value);   // aの値を取得
+            var b = parseInt(document.form01.textbox2.value);   // bの値を取得
+            var total = a + b;  // a + b
+            alert('足し算'+total);
+            
+        }
+        
+        sub.onclick=function(){
+            var a = parseInt(document.form01.textbox1.value);   // aの値を取得
+            var b = parseInt(document.form01.textbox2.value);   // bの値を取得
+            var total = a - b;  // a - b
+            alert('引き算'+total);
+        }
+        
+        mul.onclick=function(){
+            var a = parseInt(document.form01.textbox1.value);   // aの値を取得
+            var b = parseInt(document.form01.textbox2.value);   // bの値を取得
+            var total = a * b;  // a * b
+            alert('掛け算'+total);
+        }
+        
+        dvi.onclick=function(){
+            var a = parseInt(document.form01.textbox1.value);   // aの値を取得
+            var b = parseInt(document.form01.textbox2.value);   // bの値を取得
+            var total = a / b;  // a / b
+            alert('割り算'+total);
+        }
+        
+        rem.onclick=function(){
+            var a = parseInt(document.form01.textbox1.value);   // aの値を取得
+            var b = parseInt(document.form01.textbox2.value);   // bの値を取得
+            var total = a % b;  // a % b
+            alert('あまり'+total);
+        }
+        
+    </script>
+    
+</body>
+</html>
